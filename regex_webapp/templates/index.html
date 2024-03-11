@@ -1,0 +1,53 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Matcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Regex Matcher</h1>
+        <div>
+            <h2>Test Regular Expressions</h2>
+            <form id="regexForm" action="/results" method="post">
+                <label for="test_string">Test String:</label><br>
+                <input type="text" id="test_string" name="test_string" value="{{ request.form.test_string }}"><br>
+                <label for="regex_pattern">Regex Pattern:</label><br>
+                <input type="text" id="regex_pattern" name="regex_pattern" value="{{ request.form.regex_pattern }}"><br>
+                <input type="submit" value="Submit">
+                <a href="/" class="clear-button">Clear</a>
+            </form>
+            {% if matched_strings %}
+                <div id="regexResult">
+                    <h3>Matched Strings:</h3>
+                    <ul>
+                        {% for match in matched_strings %}
+                            <li>{{ match }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Validate Email Address</h2>
+            <form id="emailForm" action="/validate_email" method="post">
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" value="{{ request.form.email }}"><br>
+                <input type="submit" value="Validate">
+                <a href="/" class="clear-button">Clear</a>
+            </form>
+            {% if email_result %}
+                <div id="emailResult">
+                    <p>{{ email_result }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

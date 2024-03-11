@@ -1,0 +1,126 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Add a subtle shadow effect */
+}
+
+h1 {
+    text-align: center; /* Center align the heading */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="submit"],
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px; /* Add some border radius for a softer look */
+}
+
+input[type="text"] {
+    font-size: 16px; /* Increase font size for better readability */
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+
+.clear-button {
+    background-color: #f44336;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 10px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px; /* Add border radius */
+}
+
+.clear-button:hover {
+    background-color: #d32f2f;
+}
+
+.clear-button,
+button[type="submit"],
+button[type="button"] {
+    background-color: #333;
+}
+
+.clear-button,
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: #555;
+}
+
+.clear-button,
+button[type="submit"]:active,
+button[type="button"]:active {
+    background-color: #222;
+}
+
+#regexResult {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+#regexResult ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#regexResult ul li {
+    margin-bottom: 5px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#regexResult ul li:nth-child(odd) {
+    background-color: #444;
+}
+
+#emailResult {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+#emailResult p {
+    margin: 0;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 3px;
+}
